@@ -3,7 +3,7 @@ import { Toast } from "react-bootstrap";
 
 export default function Confirmation({ toggle }) {
   return (
-    <Toast onClose={toggle}>
+    <Toast closeButton={false} onClose={toggle}>
       <Toast.Header>
         <strong className="mr-auto">Your order is in the oven</strong>
         <small>Just now</small>
