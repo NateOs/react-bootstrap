@@ -8,16 +8,16 @@ import data from "./data.json";
 
 function App() {
   const [ordered, setOrdered] = useState(false);
-
   const displayInfo = () => {
     setOrdered(true);
-    setTimeout(() => setOrdered("false"), 3000);
+    setTimeout(() => setOrdered(false), 3000);
   };
   return (
     <>
       <Container>
+        {ordered && <Confirmation toggle={displayInfo}/>}
         <Row className="d-flex flex-row">
-            <PizzaCard />
+          <PizzaCard toggle={displayInfo}/>
         </Row>
       </Container>
     </>
